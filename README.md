@@ -60,7 +60,7 @@ Stop with `Ctrl+C`.
 In a new terminal (or `make setup-smoke-test`):
 
 ```bash
-python scripts/setup_smoke_test.py
+python -m scripts.setup_smoke_test
 ```
 
 This script:

@@ -1,0 +1,13 @@
+*~
+*.pyc
+__pycache__/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.vscode/
+nohup.out
+
+# Local run outputs
+mlruns/
+optuna_studies/
+output/

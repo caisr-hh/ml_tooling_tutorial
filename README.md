@@ -2,10 +2,8 @@
 
 This repo is used in hands-on sessions and demos covering:
 
-* MLflow (tracking)
-* Optuna (HPO)
-* Prefect (orchestration demos)
-* DVC (data versioning demos)
+* MLflow (tracking) + Optuna (HPO) hands-on
+* Prefect (orchestration) + DVC (data versioning) demos: [see here](https://github.com/caisr-hh/dvc_prefect_demo)
 
 ## Setup (prerequisites + dependencies)
 

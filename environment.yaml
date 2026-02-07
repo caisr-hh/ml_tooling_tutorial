@@ -20,6 +20,7 @@ dependencies:
   - gitpython
   - pydantic>=2.11
   - pyyaml
+  - joblib
   # science stack
   - matplotlib
   - numpy

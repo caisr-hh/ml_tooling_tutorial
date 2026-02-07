@@ -1,4 +1,4 @@
-# MLflow + Optuna hands-on (with Prefect + DVC demos)
+# ML Tooling Tutorial
 
 This repo is used in hands-on sessions and demos covering:
 

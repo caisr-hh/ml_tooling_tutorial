@@ -4,6 +4,21 @@
 help: ## Show available targets
 	@awk 'BEGIN {FS = ":.*## "}; /^[a-zA-Z0-9_.-]+:.*## / {printf "  %-28s %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
+##### Documentation tools
+# sudo npm install -g @mermaid-js/mermaid-cli
+# sudo npx puppeteer browsers install chrome-headless-shell
+MMDC ?= mmdc
+MERMAID_OUT_EXT ?= png
+MERMAID_SCALE ?= 3
+
+.PHONY: render-all-mermaids
+render-all-mermaids: ## generate images from all mermaid files in this repo (find them recursively)
+	@find . -type f -name '*.mermaid' -exec sh -c '\
+		for f do \
+			out="$${f%.mermaid}.$(MERMAID_OUT_EXT)"; \
+			$(MMDC) -i "$$f" -o "$$out" --scale $(MERMAID_SCALE); \
+		done' sh {} +
+
 ##### Dev Targets
 .PHONY: setup-smoke-test
 setup-smoke-test: ## Run a quick end-to-end check that MLflow and Optuna work together.

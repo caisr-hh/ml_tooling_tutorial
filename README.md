@@ -84,6 +84,25 @@ Optional, but recommended:
 
 See `docs/tips.md`.
 
+<details>
+<summary>Generate slides from markdown</summary>
+
+```bash
+cd docs/intro_slides_deck
+
+pandoc \
+    introduction.md -o introduction_slides.pdf \
+	-t beamer \
+	-f markdown+raw_tex \
+	--slide-level=3 \
+	--variable aspectratio=169 \
+	--variable fontsize=10pt \
+    --variable theme=metropolis \
+    --highlight-style=tango \
+	-H beamer_preamble.tex
+```
+</details>
+
 ## Note
 
 Portions of this code/project were developed with the assistance of ChatGPT (a product of OpenAI).

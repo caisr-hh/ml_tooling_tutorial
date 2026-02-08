@@ -1,0 +1,12 @@
+flowchart TB
+    Out["Plot / metric / model"]
+
+    subgraph Hidden["Hidden variables"]
+        D["data version"]
+        C["config + params"]
+        S["source code revision"]
+        E["environment"]
+        N["notebook state"]
+    end
+
+    Hidden --> Out

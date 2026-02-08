@@ -1,0 +1,11 @@
+flowchart TB
+    R["Your result (plot/metric/model)"]
+
+    HP["Search space: <br/> params + HPO"]
+    C["Code evolution: <br/> revisions"]
+    D["Data evolution: <br/> updates + multiple datasets"]
+    P["Pipelines multiply: <br/> research ideas"]
+    T["Team handoffs: <br/> onboarding + conventions"]
+    S["Scale + integration: <br/> infra + services"]
+
+    HP & C & D & P & T & S --> R

@@ -1,0 +1,10 @@
+flowchart TB
+
+    D[(fa:fa-database data)]
+    D --> XY0[("$$(X,Y)_{0}$$")] & XY1[("...")] & XYpq[("$$(X,Y)_{p}$$")]
+    XY0 --> M0["$$\text{model }_{0}$$"] & M1["..."] & Mm["$$\text{model }_{m}$$"]
+    M0 --> TM0["$$\text{model }_{0}^{0}$$"] & TM1["..."] & TMm["$$\text{model }_{0}^{n}$$"]
+
+    linkStyle 8 stroke:#609451
+    linkStyle 2,4 stroke:#F54927
+    style TMm fill:#609451

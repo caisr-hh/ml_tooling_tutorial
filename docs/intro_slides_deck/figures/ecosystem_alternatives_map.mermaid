@@ -1,0 +1,42 @@
+flowchart LR
+
+    Need["One need: make runs reproducible and work scalable"]
+
+    subgraph A["Tracking (runs)"]
+        MLflow["MLflow (FOSS)"]
+        WNB["W&B (commercial)"]
+        Neptune["Neptune (commercial)"]
+        Comet["Comet (commercial)"]
+        Aim["Aim (FOSS)"]
+        TB["TensorBoard (FOSS)"]
+    end
+
+    subgraph B["Orchestration (execution)"]
+        Prefect["Prefect (open core)"]
+        Dagster["Dagster (open core)"]
+        Airflow["Airflow (FOSS)"]
+        Flyte["Flyte (FOSS)"]
+        Argo["Argo/Kubeflow (FOSS, k8s)"]
+    end
+
+    subgraph C["Optimization (search)"]
+        Optuna["Optuna (FOSS)"]
+        RayTune["Ray Tune (FOSS)"]
+        Hyperopt["Hyperopt (FOSS)"]
+        SMAC["SMAC (FOSS)"]
+        Ax["Ax (FOSS)"]
+    end
+
+    subgraph D["Versioning (lineage)"]
+        Git["Git (FOSS)"]
+        DVC["DVC (FOSS)"]
+        lakeFS["lakeFS (open core)"]
+        Pachy["Pachyderm (open core)"]
+    end
+
+    subgraph E["Training frameworks"]
+        Lightning["PyTorch Lightning (FOSS)"]
+        HF["HF Trainer (FOSS)"]
+    end
+
+    Need --> A & B & C & D & E

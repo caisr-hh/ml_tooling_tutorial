@@ -1,0 +1,42 @@
+flowchart LR
+    P1(fa:fa-person Person 1)
+    P2(fa:fa-person-dress Person 2)
+    P3(fa:fa-person-dress Person 3)
+
+    A[fa:fa-laptop-code Project A]
+    B[fa:fa-laptop-code Project B]
+    C[fa:fa-laptop-code Project C]
+    X[fa:fa-laptop-code Project X]
+
+    %% person -> project (blue)
+    P1 p1a@--> A
+    P1 p1c@--> C
+    P2 p2b@--> B
+    P2 p2x@--> X
+    P3 p3c@--> C
+    P3 p3x@--> X
+
+    %% person <-> person (green)
+    P1 p12@<--> P2
+    P1 p13@<--> P3
+    P2 p23@<--> P3
+
+    %% project <-> project (red)
+    A ab@<--> B
+    B bc@<--> C
+    C cx@<--> X
+    A ax@<--> X
+
+    %% node styles
+    style P1 fill:#609451
+    style P2 fill:#609451
+    style P3 fill:#609451
+
+    %% link styles (by class)
+    classDef linkPP stroke:#2e7d32,stroke-width:2px;
+    classDef linkProj stroke:#c62828,stroke-width:2px;
+    classDef linkPProj stroke:#1565c0,stroke-width:2px;
+
+    class p12,p13,p23 linkPP
+    class ab,bc,cx,ax linkProj
+    class p1a,p1c,p2b,p2x,p3c,p3x linkPProj

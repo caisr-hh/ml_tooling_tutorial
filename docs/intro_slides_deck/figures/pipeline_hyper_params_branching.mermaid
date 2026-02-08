@@ -1,0 +1,11 @@
+flowchart TB
+
+    D[(fa:fa-database data)]
+    D --> |fa:fa-sliders pre-processing| XY0[("$$(X,Y)_0$$")]
+    D --> XY1[("...")] & XYpq[("$$(X,Y)_{p}$$")]
+
+    XY0 --> |fa:fa-sliders model selection| M0["$$\text{model }_{0}$$"]
+    XY0 --> M1["..."] & Mm["$$\text{model }_{m}$$"]
+
+    M0 --> |fa:fa-sliders training| TM0["$$\text{model }_{0}^{0}$$"]
+    M0 --> TM1["..."] & TMm["$$\text{model }_{0}^{n}$$"]

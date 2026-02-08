@@ -1,0 +1,18 @@
+flowchart LR
+    subgraph Coordinates["Make the hidden coordinates explicit"]
+        Git["Git (code)"]
+        DVC["DVC (data) - optional"]
+        Env["Conda (env)"]
+    end
+
+    subgraph RunLayer["Make runs findable and comparable"]
+        MLflow["MLflow (runs, metrics, artifacts)"]
+    end
+
+    subgraph BuildLayer["Build and scale the work"]
+        Optuna["Optuna (search)"]
+        Prefect["Prefect (orchestration)"]
+    end
+
+    Git & DVC & Env & Prefect & Optuna --> MLflow
+    Prefect --> Optuna

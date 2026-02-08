@@ -1,0 +1,17 @@
+flowchart LR
+    subgraph research
+        D1[(fa:fa-database Data 1)]
+        D2[(fa:fa-database Data 2)]
+        D3[(fa:fa-database Data 3)]
+
+        P1[fa:fa-code pipeline 1]
+        P2[fa:fa-code pipeline 2]
+        P3[fa:fa-code pipeline 3]
+
+        D1 --> P1 & P2 & P3
+        D2 --> P2 & P3
+        D3 --> P1 & P3
+
+        P1 --> P2 & P3
+        P2 <--> P3
+    end

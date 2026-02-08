@@ -1,0 +1,9 @@
+flowchart LR
+    Data["data@version"] --> Run["run"]
+    Code["code@git"] --> Run
+    Cfg["config@hash"] --> Run
+    Env["env@lockfile"] --> Run
+    Pipe["pipeline@execution"] --> Run
+
+    Run --> Metrics["metrics"]
+    Run --> Artifacts["artifacts (plots, tables, model)"]

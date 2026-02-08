@@ -1,0 +1,8 @@
+flowchart LR
+    Data[data] --> PreProc["preprocessing"]
+
+    Params[params] --> |"fa:fa-sliders processing"| PreProc
+    Params[params] --> |"fa:fa-sliders model selection <br/> fa:fa-sliders training config"| Train["train"]
+    
+    PreProc --> Train & Eval["eval"]
+    Train --> Eval

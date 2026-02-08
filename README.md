@@ -2,7 +2,7 @@
 
 This repo is used in hands-on sessions and demos covering:
 
-* MLflow (tracking) + Optuna (HPO) hands-on
+* MLflow (tracking) + Optuna (HPO) hands-on: [see here](https://github.com/caisr-hh/handson_mlflow_optuna)
 * Prefect (orchestration) + DVC (data versioning) demos: [see here](https://github.com/caisr-hh/dvc_prefect_demo)
 
 ## Setup (prerequisites + dependencies)

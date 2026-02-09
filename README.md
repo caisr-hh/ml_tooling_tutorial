@@ -18,7 +18,7 @@ All commands below assume:
 
 ### MLflow tracking server
 
-Start MLflow (or `make mlflow-start`):
+Start MLflow (or use `make mlflow-start`/`make mlflow-stop`):
 
 ```bash
 # values should match `configs/mlflow.yaml`
@@ -40,7 +40,7 @@ NOTE: Optuna dashboard does not work with an empty sql backend and will fail. Ei
 python -c "import optuna; optuna.create_study(study_name='setup_smoke_test', storage='sqlite:///optuna_studies/optuna.db', load_if_exists=True)"
 ```
 
-Start Optuna dashboard (or `make optuna-dashboard-start`):
+Start Optuna dashboard (or use `make optuna-dashboard-start`/`make optuna-dashboard-stop`):
 
 ```bash
 # storage should match `configs/optuna.yaml`

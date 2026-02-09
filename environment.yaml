@@ -12,7 +12,7 @@ dependencies:
   - pytest
   - pytest-cov
   - black
-  - pathspec>=1.0.0 # required by current black (expects pathspec.patterns.gitignore)
+  - pathspec
   - isort
   - mypy
   - ipykernel
